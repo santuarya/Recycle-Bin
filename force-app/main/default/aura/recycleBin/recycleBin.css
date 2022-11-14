@@ -1,0 +1,13 @@
+.THIS {
+    cursor: grab;
+    width: 100%;
+    transform: scaleX(1) translateZ(0);
+    transform-origin: 50% 0;
+}
+.THIS:hover {
+    background: aliceblue;
+}
+.THIS.ccc {
+    transform: scaleX(0) translateZ(0);
+    transition: transform 0.3s;
+}

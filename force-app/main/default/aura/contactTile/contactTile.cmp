@@ -1,0 +1,16 @@
+<aura:component>
+    <aura:attribute name="contact" type="Contact" />
+    <aura:attribute name="index" type="Integer" />
+    
+    <div id="{#v.contact.Id}" draggable="true" ondragstart="{!c.handleDrag}">
+        <lightning:layout verticalAlign="center" multipleRows="true">
+            <lightning:layoutItem padding="around-small">
+                <lightning:icon iconName="utility:rows" size="x-small" />
+            </lightning:layoutItem>
+            <lightning:layoutItem padding="around-small">
+                <div class="slds-text-heading_small">{#v.contact.Name}</div>
+                <div class="slds-text-heading_small">{#v.contact.Email}</div>
+            </lightning:layoutItem>
+        </lightning:layout>
+    </div>
+</aura:component>

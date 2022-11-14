@@ -1,0 +1,7 @@
+<aura:component controller="getContact">
+    <aura:attribute name="binVariant" type="String" default="warning" />
+    
+    <div aura:id="dropZone" class="drop-zone" ondragover="{!c.dragOverHandler}" ondragleave="{!c.dragLeaveHandler}" ondrop="{!c.handleDrop}">
+        <lightning:icon iconName="utility:recycle_bin_empty" variant="{!v.binVariant}" size="large" />
+    </div>
+</aura:component>

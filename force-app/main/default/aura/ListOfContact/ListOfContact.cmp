@@ -1,0 +1,20 @@
+<aura:component controller="getContact">
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:attribute name="contact" type="Object" />
+    
+    <lightning:layout>
+        <lightning:layoutItem size="8">
+            <lightning:card title="Contacts" iconName="standard:contact">
+                <aura:iteration items="{!v.contact}" var="con" indexVar="index">
+                    <lightning:layoutItem size="8">
+                        <c:contactTile contact="{#con}" index="{#index}" />
+                    </lightning:layoutItem>
+                </aura:iteration>
+            </lightning:card>
+        </lightning:layoutItem>
+        
+        <lightning:layoutItem size="4" padding="around-medium">
+            <c:recycleBin />
+        </lightning:layoutItem>
+    </lightning:layout>
+</aura:component>
