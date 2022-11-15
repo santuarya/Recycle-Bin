@@ -2,19 +2,23 @@
     <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
     <aura:attribute name="contact" type="Object" />
     
-    <lightning:layout>
-        <lightning:layoutItem size="8">
-            <lightning:card title="Contacts" iconName="standard:contact">
-                <aura:iteration items="{!v.contact}" var="con" indexVar="index">
-                    <lightning:layoutItem size="8">
+    <div class="slds-grid slds-gutters">
+        <div class="slds-col slds-size_8-of-12">
+            <div class="card-container slds-size_12-of-12">
+                <div class="card-heading slds-size_12-of-12 slds-p-around_medium">
+                    <div><lightning:icon iconName="standard:contact" alternativeText="Contact" title="Contact" /></div>
+                    <div class="slds-m-left_small slds-m-top_xx-small slds-text-heading_small">Contacts</div>
+                </div>
+                <div class="card-body slds-p-top_medium">
+                    <aura:iteration items="{!v.contact}" var="con" indexVar="index">
                         <c:contactTile contact="{#con}" index="{#index}" />
-                    </lightning:layoutItem>
-                </aura:iteration>
-            </lightning:card>
-        </lightning:layoutItem>
-        
-        <lightning:layoutItem size="4" padding="around-medium">
+                    </aura:iteration>
+                </div>
+            </div>
+        </div>
+
+        <div class="slds-col slds-size_4-of-12">
             <c:recycleBin />
-        </lightning:layoutItem>
-    </lightning:layout>
+        </div>
+    </div>
 </aura:component>
