@@ -2,7 +2,7 @@
     <aura:attribute name="contact" type="Contact" />
     <aura:attribute name="index" type="Integer" />
     
-    <div id="{#v.contact.Id}" draggable="true" ondragstart="{!c.handleDrag}">
+    <div id="{#v.contact.Id}" class="slds-m-bottom_xx-small record-container" draggable="true" ondragstart="{!c.handleDrag}">
         <lightning:layout verticalAlign="center" multipleRows="true">
             <lightning:layoutItem padding="around-small">
                 <lightning:icon iconName="utility:rows" size="x-small" />
